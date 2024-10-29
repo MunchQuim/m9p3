@@ -1,0 +1,91 @@
+/* Estilos generales para centrar el contenedor */
+
+
+/* Contenedor principal para ambos formularios */
+#loginFormContainer,
+#signupFormContainer {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+}
+
+/* Estilos de ambos formularios */
+#logInForm,
+#signInForm {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de las etiquetas */
+#logInForm label,
+#signInForm label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos de los inputs */
+#logInForm input[type="text"],
+#logInForm input[type="password"],
+#signInForm input[type="text"],
+#signInForm input[type="email"],
+#signInForm input[type="password"] {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#logInForm input[type="text"]:focus,
+#logInForm input[type="password"]:focus,
+#signInForm input[type="text"]:focus,
+#signInForm input[type="email"]:focus,
+#signInForm input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilos del botón de envío */
+#logInForm button[type="submit"],
+#signInForm button[type="submit"] {
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#logInForm button[type="submit"]:hover,
+#signInForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos del texto de ayuda y enlaces */
+#logInForm p,
+#signInForm p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+#logInForm p a,
+#signInForm p a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#logInForm p a:hover,
+#signInForm p a:hover {
+    color: #0056b3;
+}

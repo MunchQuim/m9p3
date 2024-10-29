@@ -1,0 +1,326 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*nota, usar js para pasar de vh a px*/
+}
+
+/*---------------------------------*/
+header {
+    min-height: 80px;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.24);
+
+    background-color: rgb(241, 241, 241);
+}
+
+#buscador {
+    margin-left: 33px;
+    min-height: 33px;
+    min-width: 200px;
+}
+
+#containerSLU {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    width: fit-content;
+    margin-right: 33px;
+}
+
+#signUp {
+    height: 33px;
+    min-width: 100px;
+    border-radius: 5px;
+}
+
+#logIn {
+    height: 33px;
+    min-width: 100px;
+    margin-left: 33px;
+    border-radius: 5px;
+    
+}
+
+#logoContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 80px;
+    margin-left: auto;
+}
+
+#logoContainer>* {
+    height: 100%;
+    width: auto;
+}
+
+#user {
+    height: 33px;
+    min-width: 33px;
+    display: none;
+}
+#user>img{
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    transition: scale 0.5s ease;
+    
+}
+#buscadorBtn,
+#signUp,
+#logIn {
+    border-radius: 10px;
+    align-content: center;
+    text-align: center;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.24);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    user-select: none;
+}
+#desplegable.filtro-menu {
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    z-index: 10;
+}
+
+#desplegable.filtro-menu select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#buscadorBtn {
+    cursor: pointer;
+    height: 33px;
+}
+
+.oculto {
+    display: none;
+}
+.flex {
+    display: flex;
+}
+/*---------------------------------*/
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+
+#loginContainer,
+#signupContainer {
+    left: 0;
+    top: 0;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: none;
+    
+}
+.blurryBackground{
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(71, 71, 71, 0.041);
+}
+#loginFormContainer,
+#signupFormContainer {
+    position: fixed;
+    z-index: 30;
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: beige;
+    padding: 20px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.24);
+    aspect-ratio: 1/1;
+
+}
+
+#heroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    height: 400px;
+    transition: height 1s ease;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.24);
+}
+
+#cardContainer {
+    min-height: 500px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* tantas columnas de un minimo de 200px como quepan.*/
+    grid-template-rows: repeat(auto-fit, auto);
+    gap: 30px;
+    padding: 20px;
+}
+
+.card {
+    flex-direction: column;
+    min-height: 400px;
+    height: auto;
+    border-radius: 20px;
+    scale: 0.9;
+    /* transition: all 0.3s ease; */
+
+}
+.card:hover .cardDescription{
+    max-height: 100px;
+}
+    .cardBigPart{
+        display: flex;
+        flex-direction: row;
+    }
+        .cardImgCont{
+            display: flex;
+            height: 100%;
+            aspect-ratio: 3/3;
+        }
+            .cardImg{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        .cardHeart{
+            position: fixed;
+            display: flex;
+            height: 20%;
+            width: 90%;
+            justify-content: flex-end;
+            align-items: center;
+            
+        }
+            .heart{
+                aspect-ratio: 1/1;
+                height: 30px;
+                cursor: pointer;
+                scale: 1;
+                transition: scale 0.3s ease;
+                user-select: none;
+            }
+            .heart:hover{
+                scale: 1.7;
+            }
+    .cardDataContainer{
+        padding: 0px 30px 30px 30px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        background-color: rgb(241, 241, 241, 0.7);
+        border-radius: 20px;
+    }
+        
+        .cardData{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .cardDescription{
+            transition: max-height 0.5s ease;
+            flex-grow: 1;
+            max-height: 0; 
+            overflow: hidden;
+        }
+.heroCard{
+    min-height: 50px;
+    aspect-ratio: 16/9;
+    max-height: 80%;
+    border-radius: 20px;
+    scale: 0.9;
+    transition: all 0.5s ease;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    flex-grow: 1;
+}
+.heroCard:hover{
+    scale: 1;
+}
+footer {
+    height: 80px;
+}
+
+/*-------------------*/
+input{
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.animOculto{
+    animation: desaparecer 0.5s ease forwards;
+}
+.pulsado{
+    animation: pulsacion 0.5s ease forwards;
+}
+.desPulsado{
+    animation: pulsacionInversa 0.5s ease forwards;
+}
+/*animaciones*/
+@keyframes mostrarAgrandar {
+    0%{
+        transform:scale(0);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
+@keyframes desaparecer {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        
+        opacity: 0;
+    }
+}
+@keyframes pulsacion {
+    0%{
+        transform:scale(0.8);
+    }
+    30%{
+        transform:scale(1.5);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
+@keyframes pulsacionInversa {
+    0%{
+        transform:scale(1.2);
+    }
+    30%{
+        transform:scale(0.5);
+    }
+    100% {
+        transform:scale(1);
+    }
+}

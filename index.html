@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <!-- <script src="backColorScript.js" defer></script> -->
+    <!-- <script src="vhToPx.js" defer></script> -->
+    <!-- <script src="noServer.js"></script> -->
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div id="loginContainer">
+        <div class="blurryBackground" id="blurryLogin"></div>
+        <div id="loginFormContainer">
+            <form id="logInForm" action="./index.html" method="POST">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="logUsername" name="username" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="logPassword" name="password" required>
+
+                <button type="submit">Iniciar Sesión</button>
+
+                <p><a href="/forgot-password">¿Olvidaste tu contraseña?</a></p>
+            </form>
+        </div>
+    </div>
+    <div id="signupContainer">
+        <div class="blurryBackground" id="blurrySignin"></div>
+        <div id="signupFormContainer">
+            <form id="signInForm" action="/signup" method="POST">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="SignUsername" name="username" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="SignEmail" name="email" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="SignPassword" name="password" required>
+
+                <label for="confirm-password">Confirmar contraseña:</label>
+                <input type="password" id="SignConfirm_password" name="confirm_password" required>
+
+                <button type="submit">Registrarse</button>
+
+                <p>¿Ya tienes una cuenta? <a href="#" id="loginLink">Inicia sesión aquí</a></p>
+            </form>
+        </div>
+    </div>
+    <header>
+        <div id="buscador">
+            <div id="buscadorBtn" onclick="toggleFilterMenu()">Filtros</div>
+            <div id="desplegable" class="filtro-menu oculto">
+                <label for="cityFilter">Filtrar por ciudad:</label>
+                <select id="cityFilter" multiple>
+                </select>
+                <button onclick="applyFilter()">Aplicar Filtro</button>
+            </div>
+        </div>
+        <!-- <div id="buscador">buscador</div> -->
+        <div id="logoContainer"><img src="./img/MeetUpAncha.png" alt="meetupLogo"></div>
+
+        <div id="containerSLU">
+            <div id="signUp">sign Up</div>
+            <div id="logIn">log In</div>
+            <div id="user">
+                <img src="img/user.png" alt="userIMG">
+            </div>
+        </div>
+
+    </header>
+    <main id="main">
+        <div id="heroContainer">
+            <div id="heroCard" class="heroCard"></div>
+        </div>
+        <div id="cardContainer">
+        </div>
+    </main>
+    <footer></footer>
+
+</body>
+
+</html>
