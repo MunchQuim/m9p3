@@ -74,7 +74,7 @@ header {
     user-select: none;
     border-radius: 50%;
     transition: scale 0.5s ease;
-    
+
 }
 #buscadorBtn,
 #signUp,
@@ -284,6 +284,12 @@ input{
 .desPulsado{
     animation: pulsacionInversa 0.5s ease forwards;
 }
+.apareciendo{
+    animation: aparicionIzquierda 1s ease-out forwards;
+}
+.desApareciendo{
+    animation: desAparicionIzquierda 1s ease-out forwards;
+}
 /*animaciones*/
 @keyframes mostrarAgrandar {
     0%{
@@ -322,5 +328,25 @@ input{
     }
     100% {
         transform:scale(1);
+    }
+}
+@keyframes aparicionIzquierda {
+    from {
+        transform: translateX(-100vw); /* Comienza fuera de la pantalla, a la izquierda */
+        opacity: 0; /* Comienza invisible */
+    }
+    to {
+        transform: translateX(0); /* Termina en su posición original */
+        opacity: 1; /* Aparece completamente */
+    }
+}
+@keyframes desAparicionIzquierda {
+    from {
+        transform: translateX(0); /* Comienza fuera de la pantalla, a la izquierda */
+        opacity: 1; /* Comienza invisible */
+    }
+    to {
+        transform: translateX(-100vw); /* Termina en su posición original */
+        opacity: 0; /* Aparece completamente */
     }
 }

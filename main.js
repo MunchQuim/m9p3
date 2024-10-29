@@ -61,6 +61,8 @@ document.getElementById("loginLink").addEventListener("click", () => {
 
 
 
+
+
 function mostrarDiv(elemento) {
     bloquearScroll();
     elemento.childNodes[3].style.animation = "mostrarAgrandar 1s ease-in-out";
@@ -79,10 +81,17 @@ function darCierre(cElement,closedElement) {
 }
 function destacado() {
     if (window.scrollY <= 10) {
+        if(document.getElementById("heroCard").classList.contains("desApareciendo")){            
+           document.getElementById("heroCard").classList.remove("desApareciendo");
+        } 
+        aparecerElemento(document.getElementById("heroCard"));
         document.getElementById("heroContainer").style.height = "400px";
         // Aquí puedes añadir más acciones, como cambiar el estilo de un elemento, mostrar un mensaje, etc.
     }
     else {
+        if(!document.getElementById("heroCard").classList.contains("desApareciendo")){
+            desAparecerElemento(document.getElementById("heroCard"));
+        }        
         document.getElementById("heroContainer").style.height = "220px";
     }
 }
@@ -391,3 +400,16 @@ function desPulsarElemento(element){
         element.classList.remove("desPulsado");
     }, { once: true });
 }
+function aparecerElemento(element) {
+    element.classList.add("apareciendo");
+    element.addEventListener("animationend", () => {
+        element.classList.remove("apareciendo");
+    }, { once: true });
+}
+function desAparecerElemento(element) {
+    element.classList.add("desApareciendo");
+/*     element.addEventListener("animationend", () => {
+        element.classList.remove("desApareciendo");
+    }, { once: true }); */
+}
+aparecerElemento(document.getElementById("heroCard"));
