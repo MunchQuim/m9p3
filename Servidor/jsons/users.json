@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "Quim",
+    "contraseña": "1234",
+    "email": "qp@mail.com"
+  },
+  {
+    "id": 2,
+    "nombre": "admin",
+    "contraseña": "admin",
+    "email": "admin@adminmail.com"
+  },
+  {
+    "id": 3,
+    "nombre": "prueba",
+    "contraseña": "123",
+    "email": "p@gmail.com"
+  }
+]

@@ -1,0 +1,152 @@
+[
+    {
+        "nombre": "Picnic y Juegos en el Parque",
+        "descripcion": "Ven a disfrutar de un picnic al aire libre, con juegos de mesa y actividades al aire libre. Trae tus bocadillos y buen humor. ¡Ideal para desconectar y conocer nuevas personas!",
+        "ubicacion": "Parque del Retiro, Madrid",
+        "ciudad": "Madrid",
+        "fecha": "2023-11-12",
+        "url": "./img/picnic.jpg",
+        "smallUrl": "./img/smallSize/picnic.jpg",
+        "hora": "13:00"        
+    },
+    {
+        "nombre": "Cata de Vinos y Quesos Locales",
+        "descripcion": "Disfruta de una selección de vinos y quesos de la región. Un sommelier nos guiará en esta experiencia sensorial. Perfecto para los amantes del buen gusto.",
+        "ubicacion": "Bodega La Cava, Barcelona",
+        "ciudad": "Barcelona",
+        "fecha": "2023-11-15",
+        "url": "./img/cata de vinos.jpg",
+        "smallUrl": "./img/smallSize/cata de vinos.jpg",
+        "hora": "19:00"
+    },
+    {
+        "nombre": "Taller de Fotografía Urbana",
+        "descripcion": "Un paseo por la ciudad para capturar sus rincones más fotogénicos. No importa tu nivel, ¡solo necesitas una cámara o móvil!",
+        "ubicacion": "Centro Histórico, Valencia",
+        "ciudad": "Valencia",
+        "fecha": "2023-11-18",
+        "url": "./img/fotografia.png",
+        "smallUrl": "./img/smallSize/fotografia.png",
+        "hora": "10:00"
+    },
+    {
+        "nombre": "Quedada de Juegos de Mesa",
+        "descripcion": "Una tarde llena de estrategia y diversión. Desde clásicos como el ajedrez hasta juegos modernos como el Catán. ¡Elige tu favorito y participa!",
+        "ubicacion": "Café La Taberna, Sevilla",
+        "ciudad": "Sevilla",
+        "fecha": "2023-11-20",
+        "url": "./img/juegos de mesa.jpg",
+        "smallUrl": "./img/smallSize/juegos de mesa.jpg",
+        "hora": "17:00"
+    },
+    {
+        "nombre": "Noche de Karaoke",
+        "descripcion": "¿Cantas en la ducha? ¡Ven a demostrar tu talento en el escenario! Un evento relajado para soltar el estrés y conocer gente divertida.",
+        "ubicacion": "Karaoke Bar Voz, Bilbao",
+        "ciudad": "Bilbao",
+        "fecha": "2023-11-22",
+        "url": "./img/karaoke.jpg",
+        "smallUrl": "./img/smallSize/karaoke.jpg",
+        "hora": "21:00"
+    },
+    {
+        "nombre": "Excursión a la Montaña con Yoga al Amanecer",
+        "descripcion": "Conéctate con la naturaleza en una excursión que termina con una sesión de yoga al amanecer en lo alto de la montaña. ¡La vista y el ambiente te recargarán de energía!",
+        "ubicacion": "Montaña Montserrat, Barcelona",
+        "ciudad": "Barcelona",
+        "fecha": "2023-11-25",
+        "url": "./img/yoga-y-trekking.jpg",
+        "smallUrl": "./img/smallSize/yoga-y-trekking.jpg",
+        "hora": "06:00"
+    },
+    {
+        "nombre": "Torneo de Fútbol entre Amigos",
+        "descripcion": "Si eres amante del fútbol, únete a este torneo amistoso. No importa el nivel, ¡todos son bienvenidos! Perfecto para desestresarse y hacer amigos.",
+        "ubicacion": "Campo Deportivo Central, Madrid",
+        "ciudad": "Madrid",
+        "fecha": "2023-11-27",
+        "url": "./img/futbol.jpg",
+        "smallUrl": "./img/smallSize/futbol.jpg",
+        "hora": "15:00"
+    },
+    {
+        "nombre": "Taller de Cocina Internacional",
+        "descripcion": "Aprendamos juntos a cocinar platos de diferentes culturas. Una actividad ideal para quienes aman la gastronomía y desean probar algo nuevo.",
+        "ubicacion": "Escuela de Cocina Gourmet, Valencia",
+        "ciudad": "Valencia",
+        "fecha": "2023-11-30",
+        "url": "./img/cocina.jpg",
+        "smallUrl": "./img/smallSize/cocina.jpg",
+        "hora": "18:00"
+    },
+    {
+        "nombre": "Escapada de Fin de Semana a una Casa Rural",
+        "descripcion": "Una escapada tranquila para desconectar y hacer nuevas amistades. Organizaremos juegos y actividades, o puedes simplemente relajarte y disfrutar de la naturaleza.",
+        "ubicacion": "Casa Rural Los Pinos, Asturias",
+        "ciudad": "Asturias",
+        "fecha": "2023-12-02",
+        "url": "./img/casa rural.jpg",
+        "smallUrl": "./img/smallSize/casa rural.jpg",
+        "hora": "09:00"
+    },
+    {
+        "nombre": "Noche de Cine al Aire Libre",
+        "descripcion": "Proyectaremos una película clásica bajo las estrellas. Trae mantas, bocadillos y disfruta del cine de una forma diferente.",
+        "ubicacion": "Plaza Mayor, Salamanca",
+        "ciudad": "Salamanca",
+        "fecha": "2023-12-04",
+        "url": "./img/cine.jpeg",
+        "smallUrl": "./img/smallSize/cine.jpeg",
+        "hora": "20:00"
+    },
+    {
+        "nombre": "Afterwork Networking para Emprendedores",
+        "descripcion": "Un espacio para conectar con otros emprendedores. Comparte ideas, proyectos y crea nuevas colaboraciones en un ambiente relajado.",
+        "ubicacion": "Coworking Space Centro, Madrid",
+        "ciudad": "Madrid",
+        "fecha": "2023-11-14",
+        "url": "./img/emprendedores.jpg",
+        "smallUrl": "./img/smallSize/emprendedores.jpg",
+        "hora": "18:30"
+    },
+    {
+        "nombre": "Speed Networking para Profesionales de Marketing",
+        "descripcion": "Un evento de networking rápido donde podrás conocer a otros profesionales de tu sector en sesiones cortas y dinámicas. ¡Lleva tus tarjetas!",
+        "ubicacion": "Hotel Rivera, Valencia",
+        "ciudad": "Valencia",
+        "fecha": "2023-11-16",
+        "url": "./img/marketing.jpg",
+        "smallUrl": "./img/smallSize/marketing.jpg",
+        "hora": "19:00"
+    },
+    {
+        "nombre": "Desayuno Empresarial para Freelancers",
+        "descripcion": "Un desayuno donde freelancers de todas las áreas pueden conocerse, compartir experiencias y consejos sobre el trabajo independiente.",
+        "ubicacion": "Café El Taller, Barcelona",
+        "ciudad": "Barcelona",
+        "fecha": "2023-11-17",
+        "url": "./img/freelancer.jpg",
+        "smallUrl": "./img/smallSize/freelancer.jpg",
+        "hora": "09:00"
+    },
+    {
+        "nombre": "Charla sobre Tendencias Digitales con Expertos en Tecnología",
+        "descripcion": "Un panel de expertos en tecnología hablará sobre las últimas tendencias y responderá preguntas del público. Perfecto para quienes desean mantenerse actualizados.",
+        "ubicacion": "Auditorio Tecnológico, Bilbao",
+        "ciudad": "Bilbao",
+        "fecha": "2023-11-19",
+        "url": "./img/tecnologias.jpg",
+        "smallUrl": "./img/smallSize/tecnologias.jpg",
+        "hora": "18:00"
+    },
+    {
+        "nombre": "Taller de Habilidades de Presentación en Público",
+        "descripcion": "Aprende técnicas para hablar en público y pierde el miedo al escenario en este taller práctico, con ejercicios para mejorar la comunicación.",
+        "ubicacion": "Centro de Formación Profesional, Zaragoza",
+        "ciudad": "Zaragoza",
+        "fecha": "2023-11-21",
+        "url": "./img/hablar-publico1.jpg",
+        "smallUrl": "./img/smallSize/hablar-publico1.jpg",
+        "hora": "16:00"
+    }
+]
