@@ -10,53 +10,78 @@ document.getElementById("buscador").addEventListener("mouseout",()=>{
 
 function toggleFilterMenu() {
     document.getElementById("desplegable").classList.toggle("oculto");
+    if(document.getElementById("desplegable").classList.contains("oculto")){
+        showAllCards();
+    }
 }
 
 
 // Función para aplicar el filtro seleccionado
 function applyFilter() {
     const citySelect = document.getElementById("cityFilter");
+   
     const selectedCities = Array.from(citySelect.selectedOptions).map(option => option.value);
-
+    console.log(selectedCities);
     const cards = document.querySelectorAll(".card");
+    
     cards.forEach(carta => {
+        carta.classList.remove("animOculto");
         const contieneCiudad = selectedCities.some(ciudad => carta.classList.contains(ciudad));
         if (!contieneCiudad) {
             ocultarCartaYAgregarClase(carta);
         }
         else {
+            carta.classList.remove("oculto");
             if (!carta.classList.contains("flex")) {
                 carta.classList.add("flex");
             }
-            carta.classList.remove("oculto");
+            
         }
     })
 
 }
 
-document.getElementById("user").addEventListener("click",()=>{
+function showAllCards() {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(carta =>{
+        if(carta.classList.contains("oculto")){
+            carta.classList.remove("oculto");
+        }
+        if(carta.classList.contains("animOculto")){
+            carta.classList.remove("animOculto");
+        }
+        if(!carta.classList.contains("flex")){
+            carta.classList.add("flex");
+        }
+
+    })
+    
+    
+}
+
+document.getElementById("user").addEventListener("click", () => {
     desPulsarElemento(document.getElementById("user"));
-},false);
+}, false);
 
 document.getElementById("signUp").addEventListener("click", () => {
     mostrarDiv(document.getElementById("signupContainer"));
-    darCierre(document.getElementById("blurrySignin"),document.getElementById("signupContainer"));
-    darCierre(document.getElementById("loginLink"),document.getElementById("signupContainer"));
+    darCierre(document.getElementById("blurrySignin"), document.getElementById("signupContainer"));
+    darCierre(document.getElementById("loginLink"), document.getElementById("signupContainer"));
 }, false);
-document.getElementById("signUp").addEventListener("click",()=>{
+document.getElementById("signUp").addEventListener("click", () => {
     desPulsarElemento(document.getElementById("signUp"));
-},false);
+}, false);
 
 document.getElementById("logIn").addEventListener("click", () => {
     mostrarDiv(document.getElementById("loginContainer"));
-    darCierre(document.getElementById("blurryLogin"),document.getElementById("loginContainer"));
+    darCierre(document.getElementById("blurryLogin"), document.getElementById("loginContainer"));
 }, false);
-document.getElementById("logIn").addEventListener("click",()=>{
+document.getElementById("logIn").addEventListener("click", () => {
     desPulsarElemento(document.getElementById("logIn"));
-},false);
+}, false);
 document.getElementById("loginLink").addEventListener("click", () => {
     mostrarDiv(document.getElementById("loginContainer"));
-    darCierre(document.getElementById("blurryLogin"),document.getElementById("loginContainer"));
+    darCierre(document.getElementById("blurryLogin"), document.getElementById("loginContainer"));
 }, false);
 
 
@@ -72,7 +97,7 @@ function ocultarDiv(elemento) {
     desbloquearScroll();
     elemento.style.display = "none";
 }
-function darCierre(cElement,closedElement) {
+function darCierre(cElement, closedElement) {
 
     cElement.addEventListener("click", () => {
 
@@ -81,17 +106,17 @@ function darCierre(cElement,closedElement) {
 }
 function destacado() {
     if (window.scrollY <= 10) {
-        if(document.getElementById("heroCard").classList.contains("desApareciendo")){            
-           document.getElementById("heroCard").classList.remove("desApareciendo");
-        } 
+        if (document.getElementById("heroCard").classList.contains("desApareciendo")) {
+            document.getElementById("heroCard").classList.remove("desApareciendo");
+        }
         aparecerElemento(document.getElementById("heroCard"));
         document.getElementById("heroContainer").style.height = "400px";
         // Aquí puedes añadir más acciones, como cambiar el estilo de un elemento, mostrar un mensaje, etc.
     }
     else {
-        if(!document.getElementById("heroCard").classList.contains("desApareciendo")){
+        if (!document.getElementById("heroCard").classList.contains("desApareciendo")) {
             desAparecerElemento(document.getElementById("heroCard"));
-        }        
+        }
         document.getElementById("heroContainer").style.height = "220px";
     }
 }
@@ -122,7 +147,8 @@ async function cargarEventos() {
 
         const cardImg = document.createElement("img");
         cardImg.classList.add("cardImg");
-        cardImg.src = element["url"];
+        cardImg.src = element["smallUrl"];
+        cardImg.loading = "lazy";
         cardImg.alt = element["nombre"];
         cardImgCont.appendChild(cardImg);
 
@@ -169,38 +195,24 @@ async function cargarEventos() {
 
     });
 
-    /*
-                <div class="card">
-                <div class="cardBigPart">
-                    <div class="cardImg">
-                        
-                    </div>
-                    <div class="cardDataContainer">
-                        <div class="cardHeart">
-                            <img class="heart" src="./img/baseHeart.png" alt="">
-                        </div>
-                        <div class="cardData"></div>
-                    </div>
-                </div>
-                <div class="cardDescription"></div>
-            </div>
-    */
-    /*
-        <div class="card">
-            <div class="cardBigPart">
-                <div class="cardImgCont">
-                    <img class="cardImg">
-                </div>
-                <div class="cardHeart">
-                    <img class="heart" src="./img/baseHeart.png" alt="">
-                </div>                 
-            </div>   
-            <div class="cardDataContainer">
-                     <div class="cardData"></div>
-                     <div class="cardDescription"></div>
-            </div>          
-        </div>
- */
+    // Paso 1: Convertir el JSON a un array de valores
+    const eventosArray = Object.values(eventos);
+
+    // Paso 2: Obtener un índice aleatorio
+    const indiceAleatorio = Math.floor(Math.random() * eventosArray.length);
+
+    // Paso 3: Seleccionar el evento aleatorio
+    const eventoAleatorio = eventosArray[indiceAleatorio];
+
+    //actualizamos el heroContainer y el heroCard
+    let heroContainer = document.getElementById("heroContainer");
+    heroContainer.style.backgroundImage = "url('"+ eventoAleatorio["url"] +"')";
+
+    let heroCard = document.getElementById("heroCard");
+    heroCard.innerHTML = "<h2>" + eventoAleatorio["nombre"] + "</h2>" +
+    "<p>" + eventoAleatorio["ubicacion"] + ": " + eventoAleatorio["fecha"] + "  " + eventoAleatorio["hora"] + "</p>"
+    +    "<p>" +eventoAleatorio["descripcion"]+ "</p>";
+
 }
 function bloquearScroll() {
     document.body.style.overflow = "hidden";
@@ -265,7 +277,7 @@ function logeado() {
 
     document.getElementById("user").style.display = "flex";
     pulsarElemento(document.getElementById("user"));
-    
+
     desbloquearScroll();
 }
 
@@ -357,9 +369,10 @@ function ocultarCartaYAgregarClase(carta) {
 
     // Escuchar el final de la animación para agregar la nueva clase
     carta.addEventListener("animationend", () => {
+        carta.classList.remove("animOculto");
         carta.classList.add("oculto");
         carta.classList.remove("flex");
-        carta.classList.remove("animOculto");
+        
     }, { once: true }); // `{ once: true }` asegura que se ejecute solo una vez
 
 }
@@ -370,8 +383,8 @@ function pausar(ms) {
 function unirse(corazon) {
     if (sesion.length == 0) {
         mostrarDiv(document.getElementById("signupContainer"));
-
         darCierre(document.getElementById("blurrySignin"));
+        darCierre(document.getElementById("loginLink"), document.getElementById("signupContainer"));
     } else {
         corazon.classList.toggle("meGusta");
         if (corazon.classList.contains("meGusta")) {
@@ -386,15 +399,15 @@ function unirse(corazon) {
     }
 
 
-    
+
 }
-function pulsarElemento(element){
+function pulsarElemento(element) {
     element.classList.add("pulsado");
     element.addEventListener("animationend", () => {
         element.classList.remove("pulsado");
     }, { once: true });
 }
-function desPulsarElemento(element){
+function desPulsarElemento(element) {
     element.classList.add("desPulsado");
     element.addEventListener("animationend", () => {
         element.classList.remove("desPulsado");
@@ -408,8 +421,8 @@ function aparecerElemento(element) {
 }
 function desAparecerElemento(element) {
     element.classList.add("desApareciendo");
-/*     element.addEventListener("animationend", () => {
-        element.classList.remove("desApareciendo");
-    }, { once: true }); */
+    /*     element.addEventListener("animationend", () => {
+            element.classList.remove("desApareciendo");
+        }, { once: true }); */
 }
 aparecerElemento(document.getElementById("heroCard"));

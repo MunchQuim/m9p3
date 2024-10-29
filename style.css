@@ -160,7 +160,7 @@ main {
 
 }
 
-#heroContainer {
+/* #heroContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,7 +169,7 @@ main {
     transition: height 1s ease;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.24);
 }
-
+ */
 #cardContainer {
     min-height: 500px;
     height: fit-content;
@@ -186,9 +186,12 @@ main {
     min-height: 400px;
     height: auto;
     border-radius: 20px;
-    scale: 0.9;
-    /* transition: all 0.3s ease; */
+    scale: 0.95;
+    transition: scale 0.3s ease;
 
+}
+.card:hover{
+    scale: 1;
 }
 .card:hover .cardDescription{
     max-height: 100px;
@@ -250,18 +253,48 @@ main {
             max-height: 0; 
             overflow: hidden;
         }
-.heroCard{
+.heroCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
     min-height: 50px;
     aspect-ratio: 16/9;
     max-height: 80%;
     border-radius: 20px;
     scale: 0.9;
-    transition: all 0.5s ease;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease; /* Transición más rápida para respuesta inmediata */
+   /*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); */
     flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo más claro */
+    backdrop-filter: blur(5px); /* Añade un ligero desenfoque al fondo */
 }
-.heroCard:hover{
-    scale: 1;
+
+/* Estilo para el título */
+.heroCard h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Estilo para el texto de ubicación, fecha y descripción */
+.heroCard p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.4;
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Efecto hover para la tarjeta */
+.heroCard:hover {
+    scale: 1; /* Devuelve el scale a 1 en hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35); /* Mayor sombra */
+    transform: translateY(-5px); /* Eleva ligeramente la tarjeta */
+    background-color: rgba(255, 255, 255, 0.9);
 }
 footer {
     height: 80px;

@@ -1,0 +1,22 @@
+#heroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    overflow: hidden;
+    /* Oculta cualquier contenido que exceda el contenedor */
+    position: relative;
+    /* background-image: url('./img/yoga-y-trekking.jpg'); */
+    /* Cambia a la URL de tu imagen */
+    background-size: 120%;
+    /* La imagen es más grande que el contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Inicia en el centro */
+    transition: background-position 0.1s ease;
+    /* Suaviza el movimiento */
+    transition: height 1s ease;
+    padding: 20px 0px;
+
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.24);
+}
