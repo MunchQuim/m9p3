@@ -383,7 +383,7 @@ function pausar(ms) {
 function unirse(corazon) {
     if (sesion.length == 0) {
         mostrarDiv(document.getElementById("signupContainer"));
-        darCierre(document.getElementById("blurrySignin"));
+        darCierre(document.getElementById("blurrySignin"), document.getElementById("signupContainer"));
         darCierre(document.getElementById("loginLink"), document.getElementById("signupContainer"));
     } else {
         corazon.classList.toggle("meGusta");

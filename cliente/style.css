@@ -179,6 +179,7 @@ main {
     grid-template-rows: repeat(auto-fit, auto);
     gap: 30px;
     padding: 20px;
+    transition: all 0.5s ease;
 }
 
 .card {
@@ -188,6 +189,7 @@ main {
     border-radius: 20px;
     scale: 0.95;
     transition: scale 0.3s ease;
+    max-width: 500px;
 
 }
 .card:hover{
