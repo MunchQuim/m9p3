@@ -16,5 +16,11 @@
     "nombre": "prueba",
     "contraseña": "123",
     "email": "p@gmail.com"
+  },
+  {
+    "id": 4,
+    "nombre": "admina",
+    "contraseña": "12345",
+    "email": "asdas@gmail.com"
   }
 ]
